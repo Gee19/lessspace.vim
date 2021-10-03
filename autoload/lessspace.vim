@@ -114,3 +114,13 @@ fun! lessspace#TemporaryDisableEnd()
         let g:lessspace_temporary_disable = max([0, g:lessspace_temporary_disable - 1])
     endif
 endfun
+
+function! lessspace#Toggle() abort
+  if (g:lessspace_enabled)
+    let g:lessspace_enabled = 0
+    echo 'Disabled LessSpace'
+  else
+    let g:lessspace_enabled = 1
+    echo 'Enabled LessSpace'
+  endif
+endfunction

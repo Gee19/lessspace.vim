@@ -23,6 +23,7 @@ endif
 
 command! -bang LessSpace let g:lessspace_enabled = <bang>1
 command! -bang LessSpaceBuf let b:lessspace_enabled = <bang>1
+command! -bang LessSpaceToggle exe lessspace#Toggle()
 
 augroup LessSpace
     autocmd!
